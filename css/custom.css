@@ -1,0 +1,603 @@
+/* 
+    Author: Zixiao Shan
+*/
+/*------------------------   standard elements  ----------------------------- */
+body{
+    margin: 0 0 0 0;
+    background-color: white;
+    /*background-color: black;*/
+}
+figure{
+    border: thin solid darkslategray;
+    border-radius: 0.4em;
+    padding: 0.5em;
+}
+footer{
+    clear: both;
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 0 5% 0 5%;
+    font-family: monospace;
+    font-size: 16px;
+}
+h3{
+    color: white;
+    text-align: center;
+}
+header{
+    overflow: auto;
+    padding: 0 5% 0 5%;/* forces header to fit to figure */
+}
+main{
+    padding: 0 5% 0 5%;
+}
+
+header h1{
+    padding-bottom: 2em;
+    padding-top: 75px;
+}
+
+a {
+    color: black;
+    text-decoration:none;
+}
+
+label.checkbox {
+    margin-right: 0.5em;
+}
+
+label.radiobtm {
+    margin-right: 0.5em;
+}
+
+p{
+    padding: 1em 0 1em 0;  
+    border: 1px solid black;
+    padding-left: 0.5em;
+    color: black;
+    text-align: center;
+}
+p.vermontintro{
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: left;
+}
+p.footer{
+    background-color: #333;
+    text-align: right;
+    padding-right: 0.5em;
+    font-style: italic;
+}
+p.hikers:hover:not(.active) {
+    background-color: #111;
+}
+p.hikerinfo:hover:not(.active) {
+    background-color: #111;
+}
+p.success{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+/*------------------------   classes           ------------------------------ */
+
+cite{
+    margin-left: 1em;
+    font-size: large;
+    line-height: initial;
+}
+
+.float_right {
+    float: right;
+    margin-left: 1em;
+}
+
+select#lstHikers {
+    /* background-color: red; */
+    font-size: 14px;
+}
+
+input#fldSearch{
+    width: 40%;
+    height: 30px;
+    font-size: large;
+}
+input#btnSubmit {
+    background:url(../images/go.jpg) no-repeat;
+    background-position: center; 
+    cursor:pointer;
+    border:none;
+    padding: 15px 32px;
+}
+
+input#btnSubmit:hover:not(.active) {
+    background-color: #111;
+}
+
+/*.float_left {
+    border: thin solid darkslategray;
+    float: left;
+    margin: 1em 1em 1em 0;
+    padding: 0.5em;
+}*/
+
+.small {
+    width: 150px;
+}
+
+.container{
+    margin-top: 1em;
+}
+
+div#errors {
+    outline: 2px dashed red;
+    background:lightyellow;
+    margin-bottom: 2em;
+}
+div#errors h2{
+    padding: 1.5em 0 .8em .5em;
+}
+div#errors ol{
+    padding: 1.5em 0 .8em .5em;
+    list-style-type: none;
+}
+div#slider{
+    padding: 0 5% 0 5%;
+    /* text-align: center; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+div.newIntro{
+    font-size: 16px;
+    font-family: sans-serif;
+    background: black;
+    color: white;
+    padding: 3%;
+}
+img.slideImg{
+     width: 100%;
+     height: auto;
+     max-height: 400px;
+     position:relative;
+     animation:animateleft 0.4s;
+}
+@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+
+img#olproductimg{
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 350px;
+}
+
+ol.displayGood {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    height: 350px;
+    /* max-width: 500px; */
+    max-height: 350px;
+}
+ul#displayleft {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    position: relative;
+    float:left;
+    width: 50%;
+}
+ul#displayright {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    position: relative;
+    float:right;
+    width: 50%;
+}
+
+li#productimg {
+    list-style: none;
+    /*padding-left: 0;*/
+}
+
+li#productname {
+    list-style: none;
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    padding: 6px 10px;
+    /*padding-left: 0;*/
+}
+
+li#productprice{
+    letter-spacing: 2px;
+    list-style: none;
+    font-size: x-large;
+    font-family: initial;
+    color: crimson;
+    font-weight: bold;
+    padding: 6px 10px;
+    /*padding-left: 0;*/
+}
+
+li#productintro{
+    list-style: none;
+    font-family: sans-serif;
+    font-size: smaller;
+    padding: 6px 10px;
+    /*padding-left: 0;*/
+}
+li#productaddcart{
+    padding: 16px 10px;
+}
+
+form#frmSearch{
+    background-color: rgba(137, 137, 137, 0.4);
+    /*border: 2px solid white;*/
+    text-align: center;
+    padding: 15px 32px
+}
+
+input#inQuantity{
+    width: 40px;
+    height: 40px; 
+    font-size: large;
+    text-align: center;
+    border-width: 2px;
+    margin: 8px 0px;
+}
+
+input#btnATC {
+    background-color: #31a202;
+    border: none;
+    color: white;
+    height: 46px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+input#btnATC:hover:not(.active) {
+    background-color: #111;
+}
+
+fieldset{
+    border-style:none;
+}
+
+fieldset.yescss{
+    background-color: rgba(2, 0, 0, 0.57);
+    border: 2px solid white;
+}
+
+legend#info{
+    padding: 2em 0 1em 0;
+    font-family: serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #0c0808;
+}
+
+body p.noticeMe{
+    background-color: #cc0033;
+    color: wheat;
+}
+/*------------------------   nav section only  ------------------------------ */
+
+ol.topnav {
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0 0 0 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    height: 50px;
+
+}
+li#navinfo {
+    width: 30%;
+    float:left;
+    padding: 14px 16px;
+    color: white;
+    font-weight:bold;
+    font-size:large;
+    font-family: sans-serif;
+    font-style: italic;
+}
+li#navright {
+    width: 10%;
+    float:right;
+}
+li#navright:hover:not(.active) {
+    background-color: #111;
+}
+
+li#navright2 {
+    width: 10%;
+    float:right;
+}
+li#navright2:hover:not(.active) {
+    background-color: #111;
+}
+
+ol.topnav li a {
+    display: block;
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:none;
+}
+
+ol.headernav {
+    list-style-type: none;
+    margin-top: 0.5em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+ol.headernav li {
+    width: 14.2%;
+    float:left;
+}
+
+ol.headernav li a {
+    display: block;
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:none;
+}
+
+.navbar {
+    border-bottom: 1px solid #efefef;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+.navbar .container {
+    margin-bottom: 0;
+}
+
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar img {
+    height: 60px;
+}
+
+ol.topnavadmin li:hover:not(.active) {
+    background-color: #111;
+}
+/*------------------------   table page  only  ------------------------------ */
+table.adminlist{
+    padding: 0 5% 0 5%;
+        width: 100%;
+}
+th,td{
+    border: 1px solid black;
+    background-color: #808080bd;
+    
+}
+ol.adminproductlist{
+    list-style:none;
+    padding-left: 0;
+}
+img.adminproductimg{
+        height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 100px;
+}
+form.adminchoice{
+    text-align: center;
+}
+input.adminchoiceadd{
+    background-color: greenyellow;
+        background-position: center;
+    cursor: pointer;
+    font-size: x-large;
+    border: none;
+    padding: 30px 60px;
+    margin: 10px;
+}
+input.adminchoiceedit{
+    background-color: lightblue;
+        background-position: center;
+    cursor: pointer;
+    font-size: x-large;
+    border: none;
+    padding: 30px 60px;
+    margin: 10px;
+}
+input.admininactiveedit{
+    background-color: lightgrey;
+        background-position: center;
+    cursor: pointer;
+    font-size: x-large;
+    border: none;
+    padding: 30px 60px;
+    margin: 10px;
+}
+a.logoutlink{
+    padding: 0;
+    display: inline-block;
+}
+ol.usercenteropt{
+    padding: 0 5% 0 5%;
+    list-style: none;
+}
+li.usercenterlst{
+    border-style: double;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size:x-large;
+}
+ol.searchol{
+    padding: 0 5% 0 5%;
+    list-style: none;
+}
+li.searchli{
+    list-style: none;
+    height:150px;
+    padding-left: 0;
+        padding-top: 5px;
+    border-bottom: ridge;
+}
+ol.searchliinside{
+    list-style: none;
+    padding-left: 0;
+}
+ol.searchdisplayleft{
+        text-align: center;
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    position: relative;
+    float:left;
+    width: 30%;
+    height: 150px;
+}
+ol.searchdisplayright{
+        list-style: none;
+    padding-left: 0;
+    display: block;
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 150px;
+}
+li.searchproductprice {
+    letter-spacing: 2px;
+        padding-top: 20px;
+    list-style: none;
+    font-size: x-large;
+    font-family: initial;
+    color: crimson;
+    font-weight: bold;
+    padding-left: 0;
+}
+a.seachspecial{
+    font-family: sans-serif;
+}
+li.carttotal{
+     list-style: none;
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: red;
+    /* height: 30px; */
+    padding: 10px 0px 10px 0px;
+    padding-top: px;
+    border-bottom: ridge;
+}
+
+input#btnCheckout{
+    background-color: #31a202;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+input#btnCheckout:hover:not(.active) {
+    background-color: #111;
+}
+
+input#btnUpdateSubmit{
+    background-color: #31a202;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+input#btnUpdateSubmit:hover:not(.active) {
+    background-color: #111;
+}
+
+input#btnUpdateDelete{
+    background-color:#cc0033;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+input#btnUpdateDelete:hover:not(.active) {
+    background-color: #111;
+}
+
+input#btnUpdateGo{
+    background-color: #31a202;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+input#btnUpdateGo:hover:not(.active) {
+    background-color: #111;
+}
+
+form#toCheckout{
+    padding: 0 5% 0 5%;
+}
+div#paypal-button-container{
+        padding: 0 5% 0 5%;
+}
+
+ol.addressdisplayleft{
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    position: relative;
+    float: left;
+    width: 70%;
+    padding: 39px 0;
+}
+ol.addressdisplayright{
+            text-align: center;
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    position: relative;
+    float: left;
+    width: 30%;
+    padding: 61px 0;
+}
+
+section#tables2{
+     padding: 0 5% 0 5%;
+}
